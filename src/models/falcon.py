@@ -1,5 +1,4 @@
-"""
-Licensed to the Apache Software Foundation (ASF) under one
+"""Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
 distributed with this work for additional information
 regarding copyright ownership.  The ASF licenses this file
@@ -32,9 +31,8 @@ from torch.optim import AdamW
 
 
 class GEPdecompose(nn.Module):
-    """
-    GEP decomposition class
-    """
+    """GEP decomposition class"""
+    
     def __init__(self, conv_layer, rank=1, init=True, alpha=1.0, bn=False, relu=False, groups=1):
         """
         Initialize FALCON layer.
