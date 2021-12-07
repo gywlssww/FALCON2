@@ -1,5 +1,4 @@
-"""
-FALCON: FAst and Lightweight CONvolution
+"""FALCON: FAst and Lightweight CONvolution
 
 Authors:
  - Chun Quan (quanchun@snu.ac.kr)
@@ -16,6 +15,7 @@ This software may be used only for research evaluation purposes.
 For other purposes (e.g., commercial), please contact the authors.
 
 """
+
 # pylint: disable=wrong-import-position,C0102,C0103,R0912,R0913,R0914,R0915,E1101
 # pylint: disable=W0401,W0614,W0603,W0622,W0632
 import argparse
@@ -55,8 +55,7 @@ parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 parser.add_argument('data', metavar='DIR',
                     help='path to dataset')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='resnet18',
-                    choices=model_names,
-                    help='model architecture: ' +
+                    choices=model_names,help='model architecture: ' +
                         ' | '.join(model_names) +
                         ' (default: resnet18)')
 parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',
@@ -65,8 +64,7 @@ parser.add_argument('--epochs', default=90, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=0, type=int, metavar='N',
                     help='manual epoch number (useful on restarts)')
-parser.add_argument('-b', '--batch-size', default=256, type=int,
-                    metavar='N',
+parser.add_argument('-b', '--batch-size', default=256, type=int, metavar='N',
                     help='mini-batch size (default: 256), this is the total '
                          'batch size of all GPUs on the current node when '
                          'using Data Parallel or Distributed Data Parallel')
@@ -76,8 +74,7 @@ parser.add_argument('--lr-decay', type=str, default='cos',
                     help='mode for learning rate decay')
 parser.add_argument('--opt', '--optimizer',
                     choices=["SGD", "Adagrad", "Adam", "RMSprop"],
-                    type=str,
-                    default="SGD")
+                    type=str, default="SGD")
 parser.add_argument('--warmup', action='store_true',
                     help='set lower initial learning rate to warm up the training')
 parser.add_argument('--world-size', default=-1, type=int,
